@@ -4,16 +4,21 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
+import java.util.List;
+
+import io.github.xmu_android_basics.ireserve.data.Demo;
+import io.github.xmu_android_basics.ireserve.data.model.Reservation;
+
 public class DashboardViewModel extends ViewModel {
 
-    private MutableLiveData<String> mText;
+    private final MutableLiveData<List<Reservation>> _reservationList;
 
     public DashboardViewModel() {
-        mText = new MutableLiveData<>();
-        mText.setValue("This is dashboard fragment");
+        _reservationList = new MutableLiveData<>();
+        _reservationList.setValue(Demo.getReservationList());
     }
 
-    public LiveData<String> getText() {
-        return mText;
+    public LiveData<List<Reservation>> getReservationList() {
+        return _reservationList;
     }
 }
