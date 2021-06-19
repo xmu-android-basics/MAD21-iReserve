@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">预约系统</string>
+    <string name="title_dashboard">工作台</string>
+    <string name="title_meeting_rooms">会议室</string>
+    <string name="title_home">我</string>
+</resources>
