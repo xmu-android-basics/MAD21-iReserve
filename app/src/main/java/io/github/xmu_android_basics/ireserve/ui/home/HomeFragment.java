@@ -12,7 +12,6 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
-import io.github.xmu_android_basics.ireserve.R;
 import io.github.xmu_android_basics.ireserve.databinding.FragmentHomeBinding;
 
 public class HomeFragment extends Fragment {

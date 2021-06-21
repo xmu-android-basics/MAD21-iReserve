@@ -16,19 +16,19 @@ import io.github.xmu_android_basics.ireserve.databinding.FragmentMeetingRoomsBin
 
 public class MeetingRoomsFragment extends Fragment {
 
-    private MeetingRoomsViewModel notificationsViewModel;
+    private MeetingRoomsViewModel meetingRoomsViewModel;
     private FragmentMeetingRoomsBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        notificationsViewModel =
+        meetingRoomsViewModel =
                 new ViewModelProvider(this).get(MeetingRoomsViewModel.class);
 
         binding = FragmentMeetingRoomsBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
         final TextView textView = binding.textNotifications;
-        notificationsViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+        meetingRoomsViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);
