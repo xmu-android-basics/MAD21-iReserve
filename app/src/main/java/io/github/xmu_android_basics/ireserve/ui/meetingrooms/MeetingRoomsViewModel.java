@@ -4,16 +4,21 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
+import java.util.List;
+
+import io.github.xmu_android_basics.ireserve.data.Demo;
+import io.github.xmu_android_basics.ireserve.data.model.MeetingRoom;
+
 public class MeetingRoomsViewModel extends ViewModel {
 
-    private MutableLiveData<String> mText;
+    private final MutableLiveData<List<MeetingRoom>> _meetingRoomList;
 
     public MeetingRoomsViewModel() {
-        mText = new MutableLiveData<>();
-        mText.setValue("This is notifications fragment");
+        _meetingRoomList = new MutableLiveData<>();
+        _meetingRoomList.setValue(Demo.getMeetingRoomList());
     }
 
-    public LiveData<String> getText() {
-        return mText;
+    public LiveData<List<MeetingRoom>> getMeetingRoomList() {
+        return _meetingRoomList;
     }
 }
